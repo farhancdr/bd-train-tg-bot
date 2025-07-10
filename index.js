@@ -1,6 +1,18 @@
-require('dotenv').config();
+const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
-const axios = require('axios');
+require('dotenv').config();
+
+// === Express server ===
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/health', (req, res) => {
+  res.send('✅ Bot is alive!');
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Health server running on http://localhost:${PORT}`);
+});
 
 // Constants
 const SEAT_CLASSES = {
