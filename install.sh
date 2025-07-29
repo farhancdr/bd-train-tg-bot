@@ -5,10 +5,10 @@ REPO_URL="https://github.com/farhancdr/bd-train-tg-bot.git"
 INSTALL_DIR="$HOME/node-server"
 PROJECT_DIR="$INSTALL_DIR/bd-train-tg-bot"
 
-# echo "📦 Updating Termux and installing dependencies..."
-# export DEBIAN_FRONTEND=noninteractive
-# pkg update -y && yes N | pkg upgrade -y
-# pkg install -y nodejs git termux-api
+echo "📦 Updating Termux and installing dependencies..."
+export DEBIAN_FRONTEND=noninteractive
+pkg update -y && yes N | pkg upgrade -y
+pkg install -y nodejs git termux-api
 
 echo "🔒 Enabling wake-lock to keep process alive..."
 termux-wake-lock
